@@ -1,0 +1,72 @@
+<%= form_for @user, :html => { :multipart => true } do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :First_Name %><br />
+    <%= f.text_field :firstName %>
+  </div>
+  <div class="field">
+    <%= f.label :Last_Name %><br />
+    <%= f.text_field :lastName %>
+  </div>
+  <div class="field">
+    <%= f.label :Email_Address %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :Andrew_ID %><br />
+    <%= f.text_field :andrewID %>
+  </div>
+  <div class="field">
+    <%= f.label :Graduation_Year %><br />
+    <%= f.text_field :graduationYear %>
+  </div>
+  <div class="field">
+    <%= f.label :Position_Title %><br />
+    <%= f.text_field :positionTitle %>
+  </div>
+  <div class="field">
+    <%= f.label :department_Name %><br />
+    <%= f.text_field :deptName %>
+  </div>
+  <div class="field">
+    <%= f.label :Creation_Date %><br />
+    <%= f.date_select :creationDate %>
+  </div>
+  <div class="field">
+    <%= f.label :User_Name %><br />
+    <%= f.text_field :userName %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :Last_Active %><br />
+    <%= f.date_select :lastActive %>
+  </div>
+  <div class="field">
+    <%= f.label :Person_Status %><br />
+    <%= f.text_field :personStatus %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+  <div class="field">
+  <%= f.label :photo %><br />
+  <%= f.file_field :photo %>
+  </div>
+  
+  
+<% end %>

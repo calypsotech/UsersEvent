@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+<% unless @user.photo_url.nil? %>
+<p><%= image_tag @user.photo_url %></p>
+<% end %>
+<p>
+  <b>First Name:</b>
+  <%= @user.firstName %>
+</p>
+
+<p>
+  <b>Last Name:</b>
+  <%= @user.lastName %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Andrew ID:</b>
+  <%= @user.andrewID %>
+</p>
+
+<p>
+  <b>Graduation Year:</b>
+  <%= @user.graduationYear %>
+</p>
+
+<p>
+  <b>Position Title:</b>
+  <%= @user.positionTitle %>
+</p>
+
+<p>
+  <b>Department name:</b>
+  <%= @user.deptName %>
+</p>
+
+<p>
+  <b>Creation Date:</b>
+  <%= @user.creationDate %>
+</p>
+
+<p>
+  <b>User Name:</b>
+  <%= @user.userName %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @user.password %>
+</p>
+
+<p>
+  <b>Last Active:</b>
+  <%= @user.lastActive %>
+</p>
+
+<p>
+  <b>Person Status:</b>
+  <%= @user.personStatus %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
